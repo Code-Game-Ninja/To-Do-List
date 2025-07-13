@@ -1,8 +1,13 @@
+/* =========================
+   Global Styles & Resets
+   ========================= */
 * {
     font-family: 'Inter', sans-serif;
 }
 
-/* Animated Background */
+/* =========================
+   Animated Gradient Background
+   ========================= */
 body {
     background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
     background-size: 400% 400%;
@@ -13,20 +18,14 @@ body {
 }
 
 @keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Floating Particles */
+/* =========================
+   Floating Particles Effect
+   ========================= */
 .particles {
     position: fixed;
     top: 0;
@@ -44,60 +43,21 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
-.particle:nth-child(1) {
-    width: 80px;
-    height: 80px;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.particle:nth-child(2) {
-    width: 60px;
-    height: 60px;
-    left: 20%;
-    animation-delay: 2s;
-}
-
-.particle:nth-child(3) {
-    width: 40px;
-    height: 40px;
-    left: 70%;
-    animation-delay: 4s;
-}
-
-.particle:nth-child(4) {
-    width: 100px;
-    height: 100px;
-    left: 80%;
-    animation-delay: 1s;
-}
-
-.particle:nth-child(5) {
-    width: 50px;
-    height: 50px;
-    left: 50%;
-    animation-delay: 3s;
-}
+.particle:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: 2s; }
+.particle:nth-child(3) { width: 40px; height: 40px; left: 70%; animation-delay: 4s; }
+.particle:nth-child(4) { width: 100px; height: 100px; left: 80%; animation-delay: 1s; }
+.particle:nth-child(5) { width: 50px; height: 50px; left: 50%; animation-delay: 3s; }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-
-    10%,
-    90% {
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateY(-100px) rotate(180deg);
-    }
+    0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10%, 90% { opacity: 1; }
+    50% { transform: translateY(-100px) rotate(180deg); }
 }
 
-/* Glassmorphism Cards */
+/* =========================
+   Glassmorphism Card Styles
+   ========================= */
 .glass-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
@@ -117,7 +77,9 @@ body {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
 }
 
-/* Modern Button Styles */
+/* =========================
+   Modern Button Styles
+   ========================= */
 .modern-btn {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
@@ -139,16 +101,15 @@ body {
     transition: left 0.5s;
 }
 
-.modern-btn:hover::before {
-    left: 100%;
-}
-
+.modern-btn:hover::before { left: 100%; }
 .modern-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Task Card Animations */
+/* =========================
+   Task Card Animations
+   ========================= */
 .task-card {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
@@ -169,16 +130,15 @@ body {
     transition: left 0.6s;
 }
 
-.task-card:hover::before {
-    left: 100%;
-}
-
+.task-card:hover::before { left: 100%; }
 .task-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Checkbox Animations */
+/* =========================
+   Custom Checkbox Styles
+   ========================= */
 .custom-checkbox {
     appearance: none;
     width: 24px;
@@ -210,48 +170,35 @@ body {
 }
 
 @keyframes checkboxPulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 @keyframes checkmarkAppear {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
-/* Priority Indicators with Glow */
+/* =========================
+   Priority Indicators (Glow)
+   ========================= */
 .priority-high {
     border-left: 4px solid #ff6b6b;
     box-shadow: -4px 0 20px rgba(255, 107, 107, 0.3);
 }
-
 .priority-medium {
     border-left: 4px solid #ffd93d;
     box-shadow: -4px 0 20px rgba(255, 217, 61, 0.3);
 }
-
 .priority-low {
     border-left: 4px solid #6bcf7f;
     box-shadow: -4px 0 20px rgba(107, 207, 127, 0.3);
 }
 
-/* Loading Animation */
+/* =========================
+   Loading Spinner Animation
+   ========================= */
 .loading-spinner {
     width: 40px;
     height: 40px;
@@ -262,77 +209,41 @@ body {
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* Slide Animations */
-.slide-in-left {
-    animation: slideInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.slide-in-right {
-    animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.slide-out-right {
-    animation: slideOutRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
+/* =========================
+   Slide Animations
+   ========================= */
+.slide-in-left { animation: slideInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-in-right { animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-out-right { animation: slideOutRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
 
 @keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes slideOutRight {
-    to {
-        opacity: 0;
-        transform: translateX(100px);
-    }
+    to { opacity: 0; transform: translateX(100px); }
 }
 
-/* Pulse Animation for Stats */
-.pulse-animation {
-    animation: pulse 2s infinite;
-}
-
+/* =========================
+   Pulse Animation (Stats)
+   ========================= */
+.pulse-animation { animation: pulse 2s infinite; }
 @keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.7;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
 
-/* Modern Input Styles */
+/* =========================
+   Modern Input Styles
+   ========================= */
 .modern-input {
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -347,7 +258,13 @@ body {
     transform: translateY(-2px);
 }
 
-/* Filter Button Animations */
+input:focus {
+  color: #222;
+}
+
+/* =========================
+   Filter Button Animations
+   ========================= */
 .filter-btn {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -365,7 +282,9 @@ body {
     transform: translateY(-2px);
 }
 
-/* Modal Animations */
+/* =========================
+   Modal Animations
+   ========================= */
 .modal-backdrop {
     backdrop-filter: blur(10px);
     animation: fadeIn 0.3s ease;
@@ -376,28 +295,18 @@ body {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes modalSlideIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9) translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
+    from { opacity: 0; transform: scale(0.9) translateY(-20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Notification Styles */
+/* =========================
+   Notification Styles
+   ========================= */
 .notification {
     background: linear-gradient(135deg, #667eea, #764ba2);
     backdrop-filter: blur(20px);
@@ -414,18 +323,13 @@ body {
 }
 
 @keyframes notificationSlide {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
-/* Floating Action Button */
+/* =========================
+   Floating Action Button
+   ========================= */
 .fab {
     position: fixed;
     bottom: 30px;
@@ -450,7 +354,9 @@ body {
     box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
 }
 
-/* Progress Bar */
+/* =========================
+   Progress Bar Styles
+   ========================= */
 .progress-bar {
     height: 6px;
     background: rgba(255, 255, 255, 0.3);
@@ -479,37 +385,26 @@ body {
 }
 
 @keyframes progressShimmer {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(100%);
-    }
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
-/* Responsive Design Enhancements */
+/* =========================
+   Responsive Design
+   ========================= */
 @media (max-width: 768px) {
-    .particles {
-        display: none;
-    }
-
-    .fab {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
+    .particles { display: none; }
+    .fab { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
 }
 
-/* Dark mode support */
+/* =========================
+   Dark Mode Support
+   ========================= */
 @media (prefers-color-scheme: dark) {
     .task-card {
         background: rgba(30, 30, 30, 0.9);
         color: white;
     }
-
     .modern-input {
         background: rgba(30, 30, 30, 0.9);
         color: white;
